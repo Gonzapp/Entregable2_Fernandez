@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--JS-->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- JS-->
     <script defer src="./js/main.js"></script>
     <title>Java Script</title>
 
 </head>
 <body>
-    <h1>Gonzalo Fernandez</h1>
-
-
-
+    <!-- Crear el elemento <h2> -->
+    <div>    
+        <div class="mesa-contenedor">
+            <h2 id="numeroMesa"><p>Mesa Numero:</p></h2>
+            <input type="number" id="entradaNum" min="1" max="15">
+            <button id="actualizarNum"><span>Aceptar</span></button>
+        </div>
+        <p id="alertNum"></p>
+    </div>
+    <section class="menuPrincipal">
+        <div class="menu-contenedor">
+            <div id="carritoAlert" class="cartel-alert">
+                <span class="cartel-text">EL CARRITO ESTA VACIO</span>
+                <button id="botonAlert" class="cartel-button">Volver al menu</button>
+            </div>
+            <ul id="menu" class="hidden">
+                <li><button id="opcion1"><span class="text-menu">Desayuno/Merienda 🥐</span></button></li>
+                <li><button id="opcion2"><span class="text-menu">Pedido 🛍️</span></button></li>
+                <li><button id="opcion3"><span class="text-menu">Cancelar 🚪</span></button></li><br>
+                <li> <div id="submenu" class="hidden text-menu"></div></li>
+            </ul>
+        </div>
+    </section>
+    <div id="contenedor"></div>
+    <div id="info-mov"></div>
 </body>
 </html>
+
