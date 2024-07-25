@@ -21,7 +21,7 @@
 //     { nombre: "Tacos", precio: 4600, stock:2}
 //   ]
 
-// Constantes y variables globales
+
 const carrito = JSON.parse(localStorage.getItem('carrito')) || []
 const descuentoEfectivo = 0.90
 const servicioDeMesa = 500
@@ -46,7 +46,6 @@ const comidasDesayunoMerienda = [
     { id: 7, nombre: 'Sandwich de huevo', precio: 1300, stock: 2 },
 ]
 
-// Inicializar total correctamente usando cantidades
 let total = carrito.reduce((acc, item) => item && item.precio && item.cantidad ? acc + item.precio * item.cantidad : acc, 0)
 let mesa = localStorage.getItem('mesa') || null
 
@@ -61,7 +60,7 @@ const registro = document.createElement('p')
 const carritoFinal = document.createElement("div")
 h2.innerText = 'Seleccione su mesa'
 
-// Funciones
+
 function bloquearOpciones(estado) {
     document.querySelectorAll('#menu button').forEach(btn => btn.disabled = estado)
 }
@@ -86,7 +85,7 @@ function menu() {
         const mesaNumber = Number(input.value)
         if (mesaNumber >= 1 && mesaNumber <= 15) {
             mesa = mesaNumber
-            localStorage.setItem('mesa', mesa) // Guardar mesa en localStorage
+            localStorage.setItem('mesa', mesa)
             h2.textContent = 'Mesa Numero: ' + mesa
             input.style.display = 'none'
             boton.style.display = 'none'
@@ -123,7 +122,7 @@ function menuItem() {
         alertNum.innerText = ''
         carrito.length = 0
         localStorage.removeItem('carrito')
-        localStorage.removeItem('mesa')// Limpiar mesa de localStorage
+        localStorage.removeItem('mesa')
         mesa = null
         total = 0
         alertNum.innerText = 'Pedido cancelado. Puedes hacer un nuevo pedido.'
