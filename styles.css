@@ -1,93 +1,77 @@
 * {
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  }
-
-body{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    z-index: -10;
-    background-color: #ccc;
-} 
-.mesa-contenedor{
-    display: flex;
-    flex-direction: row;
-    width: 300px;
-    height: 80px;
-    align-items: center;
-    gap: 2px;
 }
 
-#numeroMesa{
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-flow: wrap column;
+    z-index: -10;
+    background-color: #686868;
+}
+
+.mesa-contenedor {
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    margin: 2%;
+    
+}
+
+#numeroMesa {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 5px;
-    font-size: medium;
-    width: auto;
-    height: 30px;
-    background-color:burlywood;
+    padding: 10px;
+    font-size: 24px;
+    width: 400px;
+    height: auto;
+    background-color: burlywood;
     align-items: center;
     border: black 1px solid;
     border-radius: 2%;
+    
+    
+}
+
+#entradaNum{
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    font-size: 2rem;
 }
 
 
-#number, #actualizarNum{
+#actualizarNum {
     display: flex;
-    height: 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    padding: 12px;
+    font-size: 1.2rem;
     align-items: center;
 }
-#alertNum{
-    margin:0 0 10px 0;
+
+#alertNum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 20px 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: white;
 }
 
-
-/* .container {
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
-    gap: 2px 2px; 
-    grid-template-areas: 
-      "navegador navegador opcionesMesa opcionesMesa"
-      "mesas mesas opcionesMesa opcionesMesa"
-      "mesas mesas opcionesMesa opcionesMesa"
-      "mesas mesas opcionesMesa opcionesMesa"
-      "infoMesa infoMesa infoMesa infoMesa"; 
-      height: auto;
-      gap: 1%;
-  }
-
-.navegador {
-    grid-area: 1 / 1 / 2 / 3;
-    background-color: aquamarine;  
-    height: auto;
-    border: black 1px sold;
-}
-
-.opcionesMesa {
-    grid-area: 1 / 3 / 5 / 5; 
-    background-color: rgb(159, 159, 77);
-    height: 50vh;
-    border: black 1px sold;
-}
-
-.mesas {
-    grid-area: 2 / 1 / 5 / 3; 
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1px;
-    background-color: blueviolet;
-    border: black 1px solid;
-} */
-
-.mesa{
+.mesa {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -99,69 +83,87 @@ body{
     border: black 1px solid;
     width: 100px;
     height: 100px;
-    flex: 0 1 20%; /* Crece, encoge, base al 50% del ancho del contenedor */
-    box-sizing: border-box; /* Incluye el padding y border en el tamaño */
+    flex: 0 1 20%;
+    box-sizing: border-box;
     margin: 10px;
 }
-/* 
-.infoMesa {
-    grid-area: 5 / 1 / 6 / 5;
-    background-color: tomato;
-    height: 100%;
-    border: black 1px sold;
-} */
-.cartel-alert{
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top:4%;
-    left:40%;
-    background-color: gray;
-    width: 55vh;
-    height: 200px;
-    gap: 10%;
-    border: 1px solid black;
-    border-radius: 2%;
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
 }
 
-#carritoAlert{
-    visibility: hidden;
+ul {
+    font-size: 15px;
 }
-.cartel-button{
-    width: 200px;
-    height: 50px;
+
+li {
+    margin: 5px 0;
 }
-#menu{
-    li{
+
+.menuPrincipal{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: #969696cc;
+    padding: 5%;
+    border: black 2.5px solid;
+    width: 40vw;
+}
+.menu-contenedor {
+    padding: 20px;
+}
+
+
+
+#menu {
+    display: flex;
+    flex-direction: column;
+  
+    
+    li {
         list-style-type: none;
-        
-        button{
+
+        button {
             width: 300px;
-            background-color: burlywood ;
+            background-color: burlywood;
         }
     }
 }
-.text-menu{
+
+.text-menu {
     font-size: large;
 }
-#submenu{
+
+#submenu {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(196, 196, 196, 0.39);
+    width: 300px;
 }
 
-
-#contenedor{
+.carrito-final{
     display: flex;
     flex-direction: column;
-    padding: 5px;
-    width: 50rem;
+    width: max-content;
+    font-size: 1rem;
+    h3, p, li{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        margin-left: 20px;
+       
+    }
 }
 
-.itemBox{
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.itemBox {
     display: flex;
     flex-direction: row;
     margin: 1px;
@@ -170,7 +172,8 @@ body{
     border-radius: 2%;
     background-color: gray;
     border: 1px solid black;
-    p{
+
+    p {
         padding-left: 2%;
         display: flex;
         align-items: center;
@@ -178,8 +181,5 @@ body{
     }
 }
 
-#mensaje, #inputMesa, #resultado {
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
+
+
